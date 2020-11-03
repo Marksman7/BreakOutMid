@@ -1,0 +1,41 @@
+-created paddleNext and  paddleNextController, copies of of paddleNext and
+ paddleController. However they only can move on their respectives sides 
+ of the screen becaus I want the player to use both hands or play with
+ some one else for example left paddle uses A and D while the right paddle
+ uses Left and Right but they can not go to the other side and bound to 
+ their respective halves.
+-changed the hard code from the paddles to 
+ ((this.Game.GraphicsDevice.Viewport.Width / 4) * 3), 
+ ((this.Game.GraphicsDevice.Viewport.Height / 80) * 75) because One you
+ had coment saying it shouldn't be hard coded so I though to my self I
+ can change that no prob.
+-I added ScoreManager Scoreing to Ball to keep track of lives, or more
+ acurate subtrack them. Then compare them for a lose result (broken lose)
+ while I added 20 to the boundrys because I wanted it to go off screen 
+ before it teleports back. It is mostly added in the update statement
+-I also added a bunch of differnt void and int public methods in 
+ ScoreManager too, but if I am going to be honest about a third of them 
+ are not being used because it was not working how I wanted it to so I 
+ did something more effective, while the others are being in constant use
+ thorugh out different classes in the program.
+-I changes the valuse to the level classes, how ever I added alot on 
+ Level1, and it is also being used as the class to go to the other two 
+ levels Level2 and Level3,
+-Up and W are both opiton to make the ball fly up at the start
+ , both Ball and PaddleController classes
+-my win and lose I need to really think about because I felt really empty
+ for some reason when thinking about those states to my game is un winable
+ and unloseable techically, other than running out of lives or levels
+-Then the direction the ball will go is being put in a random() to go 
+ either -1 (left) or 1 (right), both Ball and PaddleController classes
+-Speed of the ball I also did random.next(340, 400), because why not and 
+ also it was orignally going to be 420 but thats seems too fast so 400 is 
+ good, both Ball and PaddleController classes
+
++Maintainbility : I will say its a B- because it is more of a mess that I
+ threw random things in and I need to organize more
+
++State Changes : At the begining I really messed up on it and I just ended
+ up putting the refactoring to mostly the default besides what you had us 
+ change in class for week 8 about it glitching and going lacrose the 
+ screen for ever;
